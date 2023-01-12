@@ -1,0 +1,198 @@
+@charset "UTP-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700;900&display=swap');
+
+*{margin: 0; padding: 0;}
+
+body{
+    background-color: lightgray;
+}
+.box1{
+    background-color: #fff;
+    margin-top: 100px;
+}
+.box1 .child{
+    width: 300px;
+    background-color: orangered;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    border: 10px solid orangered;
+    /* transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;*/
+   
+    /* transition: background-color 0.3s 0.5s ease, 
+    transform 0.4s 0.8s ease; 두개의값을동시에 줄수있다*/ 
+   
+    /*transition 순서 property-duration-delay-timing function*/
+    /* transition: all 0.3s 0.2s ease;  all 넣으면 모든 요소 all생략도 가능 */
+    /*transition: 0.3s 0.2s ease;*/
+    transition: 0.3s;
+
+}
+.box1:hover .child{
+    background-color: coral;
+    transform: translateY(-30px);
+}
+
+
+
+.box2{
+    width: 400px;
+    margin: 50px auto 0;
+    background-color: cornflowerblue;
+    color: #222;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden; /*영역밖의요소 숨김*/
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 500;
+}
+  
+.box2 p{
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.box2:hover p{
+    transform: translateX(0%);
+}
+/*순서대로 움직이게하기*/
+.box2 p.one{transition-delay: 0.3s;}
+.box2 p.two{transition-delay: 0.6s;}
+.box2 p.three{transition-delay: 0.9s;}
+
+.box3{
+    background-color:greenyellow;
+    font-size: 30px;
+    color: #222;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 50px;
+
+    animation-name: box_ani; /*animation 이름, keyframes와 이름이 동일해야함*/
+    animation-duration: 2s;/*지속시간*/
+    animation-iteration-count: 3; /*반복동작 횟수*/
+    animation-direction: normal;
+    /*animation 방향 기본값 normal, alternate:정방향->역방향->정방향 
+    alternate-reverse : 역->정->역*/
+    animation-delay: 3s; /*지연시간*/
+    animation-timing-function: linear;/*가속도*/
+    animation-fill-mode: both;
+    /*애니메이션의 처음과 끝의 상태
+    forwards는 animation가 끝난 상태에서 멈춤
+    backwards는 시작을 keyframes의 0% 상태부터 시작
+    forwards + backwords = both */
+    
+
+}
+@keyframes box_ani{
+    0%{margin-left: 100px;}/*시작 from대신 0%가능*/
+    100%{margin-left: 400px;}/*끝 to대신 100%가능*/
+}
+
+
+.box4{
+    margin: 100px 0 400px;
+    font-size: 30px;
+    text-align: center;
+    width: 100px; height: 100px;
+    line-height: 100px;
+    background-color: darkgoldenrod;
+    color: #222;
+    
+    animation-name: box2_ani2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    
+   /* animation: box_ani2 4s linear 1s infinite both;*/
+
+
+
+}
+@keyframes box2_ani2{
+    0%{transform: translate(100px,0);}
+    25%{transform: translate(300px,0);}
+    50%{transform: translate(300px,200px);}
+    75%{transform: translate(100px,200px);}
+    100%{transform: translate(100px,0);}
+}
+
+.약::after{content: ""; 
+  clear:both; display: block;}
+
+.box5{
+  width: 1000px;
+  background-color: antiquewhite;
+  padding: 20px;
+  margin: 0 auto;
+  
+}
+.box5>div{
+  float: left;
+  width: 49%; height: 300px;
+  background-color: cornflowerblue;
+}
+.box5>div.child_1{
+  margin-right: 2%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.box5>div.child_1 .ro{
+  background-color: blueviolet;
+  position: absolute;
+  left: 55%; top: 35%;
+  padding: 20px 30px;
+  font-size: 40px;
+  color: #fff;
+  transform: translateZ(300px) rotateY(45deg);
+ 
+  transform-origin: left center;
+}
+.box5>div.child_2{
+    position: relative;
+    perspective: 600px;
+   
+}
+.box5>div.child_2 .top{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    transform-style: preserve-3d;
+}
+.box5>div.child_2 .top div{
+    transform: translateY(100%) rotateX(-80deg);
+    transform-origin: center top;
+    transition: 0.8s cubic-bezier(0.12, 0.3, 0.25, 1);
+    opacity: 0;
+
+}
+.box5>div.child_2:hover .top div{
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.2s;
+
+}
+.box5>div.child_2:hover .top div:first-child{/*top의 자식중 첫째*/
+   
+}
+.box5>div.child_2:hover .top div:last-child{/*top의 자식중 막내*/
+    transition-delay: 0.4s;
+
+}

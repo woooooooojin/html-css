@@ -1,0 +1,150 @@
+@charset "UTF-8";
+*{padding: 0; margin: 0;}
+.치료::after{content:""; clear: both; display: block;}
+
+.전체{color: red; background-color: lightgray; height: 600px;
+width: 1000px; margin: 0 auto; /*정중앙 위치*/
+padding: 20px;
+margin-top: 30px;} 
+
+.전체 .첫째{background-color: #EAC7C7;
+padding: 20px;} 
+
+.전체 .첫째 .첫자{background-color: #A0C3D2;
+width: 32%;
+margin-right: 2%;
+height: 200px;
+float: left;}
+
+.전체 .첫째 .첫자.첫자1{
+    position: relative;
+    overflow: hidden;/*영역에서 넘치는것은 안보이게함*/
+}
+
+.전체 .첫째 .첫자.첫자1 .하{
+   background-image: url(../image/img1.jpg);
+   height: 100%;
+   background-size: cover;
+   background-position: center center; /*x y축 중앙*/
+   position: relative;
+    
+}
+
+.전체 .첫째 .첫자.첫자1 .하 h4{
+    position: absolute;
+    left: 50%; top: 50%; 
+    transform:translate(-50%,-50%) ;
+    /*h4정중앙으로보내기*/
+
+
+}
+
+.전체 .첫째 .첫자.첫자1 .상{
+    height: 100%;
+    background-image: url(../image/img2.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: absolute; 
+    /*position-absolute되면 자식의 공간만 차지
+    넓이를 다시 설정해야한다*/
+    left: 100%; top: 0; /*옆으로 밀어놔야 됨*/
+    width: 100%;
+    transition: 0.3s;   /*hover의 시간을 줌*/
+}
+.전체 .첫째 .첫자.첫자1:hover .상{
+    left: 0; 
+}
+
+.전체 .첫째 .첫자.첫자1 .상 h4{
+    position: absolute;
+    left: 50%; top: 50%; /*부모위치 기준으로 움직임*/
+    transform: translate(-50%,-50%);
+}
+
+.전체 .첫째 .첫자.첫자2{
+    position: relative;
+    overflow: hidden;
+}
+.전체 .첫째 .첫자.첫자2>div{
+    height: 100%; 
+    position: absolute; 
+    left: 0; top: 0;
+    width: 100%;
+}
+.전체 .첫째 .첫자.첫자2>div h4{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    /*h4 정중앙으로 보내기*/
+}
+
+.전체 .첫째 .첫자.첫자2 .상{
+    background-image: url(../image/img3.jpg);
+    background-size: cover;
+    background-position: center center;
+    z-index: 2; /*zindex는 position(relative, absolute, fixed)이 있어야 사용가능*/
+    top: -100%;
+    transition: 0.3s;
+}
+.전체 .첫째 .첫자.첫자2:hover .상{
+    top: 0;
+}
+.전체 .첫째 .첫자.첫자2 .상 h4{}
+
+.전체 .첫째 .첫자.첫자2 .하 {
+    background-image: url(../image/img4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.전체 .첫째 .첫자.첫자2 .하 h4{}
+
+
+.전체 .첫째 .첫자.첫자3{
+    margin-right: 0;
+    position: relative; /*absolute의 기준*/
+}
+
+.전체 .첫째 .첫자.첫자3>div{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+}
+.전체 .첫째 .첫자.첫자3>div h4{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.전체 .첫째 .첫자.첫자3 .상{
+    background-image: url(../image/img5.jpg);
+    z-index: 10; /*'하'위에있고 '상'이 밑에있을때 상을 위로 올릴수있음*/
+    transition: 0.3s;
+    opacity: 0;
+    transform: scale(0.3);
+    transition-timing-function:cubic-bezier(0.47, 0.14, 0.33, 1.32);/*애니매이션 효과 가속도조절*/
+}
+.전체 .첫째 .첫자.첫자3:hover .상{
+    opacity: 1; /*투명하게*/
+    transform: scale(1);
+    border-radius: 50%; /*가장자리 원모양으로 바뀜*/
+}
+
+.전체 .첫째 .첫자.첫자3 .하{
+    background-image: url(../image/img6.jpg);
+}
+
+.전체 .둘째{
+    background-color:green;
+    width: 30%; 
+    /*%의 기준
+    width --> 부모(.전체)의 넓이*/
+    height: 30%;
+    /*%의 기준
+    height --> 부모(.전체)의 높이 단 부모가 높이값이 있어야한다*/
+    
+    /*padding, margin은 상하좌우 모두 부모의 넓이 기준*/
+
+}
