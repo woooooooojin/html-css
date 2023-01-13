@@ -1,10 +1,111 @@
 @charset "UTF-8";
 @import url(reset.css); /*style.css에 reset.css 연결*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-/* font-family: 'Noto Sans KR', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Hana B'; */
 /*폰트연결*/
-h2{}
-h3{font-size: 30px;
-font-family: 'Hana B';}
+
+/*layout*/
+#wrap{}
+#header{
+    background-color: #fff;
+}
+/*banner*/
+#banner{
+    background-color: #a0d1ee;
+    height: 470px;
+
+}
+/*container*/
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;/*ban_left 위치 기준*/
+}
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+/*header*/
+.header{
+    font-family: 'Hana B';
+}
+.header li{
+    margin: 7px 0;
+    background: url(../img/bar1.gif) no-repeat 0px 8px; /*x,y축 이동*/
+    
+}
+.header li a{
+    font-size: 13px;
+    display: block;
+    padding: 8px 15px;
+}
+
+
+.header .list1{float: left;}
+.header .list1 li{float: left;}
+.header .list1 li:nth-child(2){/*2번째 li child*/
+    background: none;
+}
+.header .list1 li.green{}
+.header .list1 li.green a{
+    background-color: #00907f;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.header .list2{float: right;}
+.header .list2 li{float: left;}
+.header .list2 li a{
+    color: #797979;
+}
+.header .list2 li.logo{
+    margin: 11px 13px 11px 0;
+}
+.header .list2 li.logo a{
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    border-radius: 3px;
+    
+}
+
+/*banner*/
+.ban_left{}
+.ban_right{
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    
+}
+.ban_right .br_tit{
+    background-color: #fff;
+    padding: 45px 0 60px 100px;
+
+}
+.ban_right .br_tit h3{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -1px; /*자간*/
+
+}
+.ban_right .br_tit  p{
+    position: relative;
+    font-size: 14px;
+    padding-top: 50px;
+}
+.ban_right .br_tit p strong{
+    color: #00907f;
+}
+.ban_right .br_tit  p::before{
+    content: "";
+    position: absolute;
+    top: 24px; left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #00907f;
+    
+}
+
 
 
