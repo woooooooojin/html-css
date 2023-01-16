@@ -107,5 +107,78 @@ font-family: 'Hana B'; */
     
 }
 
+.ban_right .br_tit .login_btn{
+    position: absolute;
+    right: 60px; top: 55px;
 
+}
+/*회원가입 로그인버튼*/
+.ban_right .br_tit .login_btn ul{}
+.ban_right .br_tit .login_btn ul li{}
+.ban_right .br_tit .login_btn ul li a{
+    display: block;
+    width: 80px; height: 80px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.ban_right .br_tit .login_btn ul li.lb1{
+    margin-bottom: 1px;
+
+}
+
+.ban_right .br_tit .login_btn ul li.lb1 a{
+    background: #db3360 url(../img/ico_login.png) no-repeat center 18px;
+    padding-top: 50px;/*글자 이동하려면 패딩을 이용해야한다*/
+    box-sizing: border-box;/*패딩탑 넣으면 넓이가 커짐 방지*/
+    transition: 0.3s; /*hover 시간주기*/
+
+}
+.ban_right .br_tit .login_btn ul li.lb1 a:hover{background-color: #c4204c;}
+.ban_right .br_tit .login_btn ul li.lb2 a{
+    background: #333;
+    transition: 0.3s;
+    line-height: 80px;
+}
+.ban_right .br_tit .login_btn ul li.lb2 a:hover{
+    background: #3c3f44;
+}
+/* 자식의 float에 의해 부모가 깨지는 현상 방지
+1. :after를 사용하여 clear:both 적용
+2. 부모에게 overflow:hidden 
+3. 부모에게 강제로 높이를 준다 */
+
+/*br_btn*/ 
+.ban_right .br_btn{
+    height: 50px;
+    margin-top: 25px;
+}
+.ban_right .br_btn ul{
+    overflow: hidden;
+    background-color: #00907f;
+}
+.ban_right .br_btn ul li{
+    float: left;
+    font-size: 14px;
+    line-height: 50px;
+    position: relative; /*before의 기준*/
+    width: 25%; 
+    text-align: center;
+}
+.ban_right .br_btn ul li::before{
+    content: "";
+    position: absolute;
+    left: 0; top: 18px;
+    width: 1px; 
+    height: 14px;
+    background-color: #62bdb1;
+}
+.ban_right .br_btn ul li:first-child::before{
+    width: 0;height: 0; /*before의 첫째 자식 막대기 없애기*/
+}
+
+.ban_right .br_btn ul li a{
+    color: #fff;
+    display: block;
+}
 

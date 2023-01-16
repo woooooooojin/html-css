@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.clear:after{content: ""; clear: both; display: block;} /*깨짐방지*/
+.전체 {
+    background-color: #7B8FA1;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 30px 0; /*위아래30 양옆0*/
+}
+
+.전체 .첫째 {
+    background-color: #CFB997;
+    width: 900px;
+    margin: 0 auto;
+    /*가운데*/
+    padding: 30px;
+    box-sizing: border-box; /*사이즈를 보더까지 포함*/
+}
+
+.전체 .첫째>div {
+    background-color: #FAD6A5;
+    height: 200px;
+    width: 47.5%; /*전체100%-마진5% / 2*/
+    float: left;
+}
+
+.전체 .첫째 .첫손1 {
+    margin-right: 5%;
+    background-image: url(img/img1.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden; /*right를 오른쪽으로 옮기고 넘치는곳 숨기기*/
+
+}
+.전체 .첫째 .첫손1 h4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:rgba(255,255,255,0.3);
+    color: #222;
+    padding: 10px 30px;
+    border-radius: 10px;
+    
+}
+.전체 .첫째 .첫손1 .right{
+    position: absolute;
+    left: 100%;/*안보이게 숨기기*/ top: 0; width: 100%; height: 100%;
+    background-image: url(img/img2.jpg);
+    background-size: cover;
+    transition: 0.3s;
+}
+.전체 .첫째 .첫손1:hover .right{
+    left: 0;
+
+}
+
+
+.전체 .첫째 .첫손2{
+    overflow: hidden;
+    position: relative;
+}
+.전체 .첫째 .첫손2 video{
+    width: 100%; 
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.전체 .둘째{
+    background-color: #F8EDE3;
+    width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+   
+}
+.전체 .둘째>div{
+    background-color: #DFD3C3;
+    width: 23.5%; /*{전체100% - (2%*3)} / 4개*/
+    float: left;
+    height: 150px;
+    margin-right: 2%;
+}
+
+.전체 .둘째 .둘자1{
+   
+}
+.전체 .둘째 .둘자2{
+   
+}
+.전체 .둘째 .둘자3{
+   
+}
+.전체 .둘째 .둘자4{
+    margin-right: 0;
+}
