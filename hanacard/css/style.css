@@ -16,6 +16,14 @@ font-family: 'Hana B'; */
     height: 470px;
 
 }
+/*contents layout*/
+#contents{}
+#cont1{
+    height: 940px;
+    background-color: #f5f6f8;
+    
+}
+
 /*container*/
 .container{
     width: 1200px;
@@ -182,3 +190,92 @@ font-family: 'Hana B'; */
     display: block;
 }
 
+/*nav*/
+#nav{
+    position: absolute;
+    left: 0; top: -50px;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    font-family: 'Hana B';
+    padding: 30px 0;
+}
+#nav .gnb{
+    padding-left: 60px;
+    
+}
+#nav .gnb li{
+    display: inline; /*옆으로 정렬됨*/
+    /*lnline요소는 padding margin의 상하가 적용이 안된다 좌우는 적용이됨*/
+    padding: 10px;
+    
+}
+#nav .gnb li a{
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 17px;
+    transition: 0.3s;
+
+}
+#nav .gnb li a:hover{
+    background-color: #00907f;
+    color: #fff;
+    border-radius: 3px;
+
+}
+#nav .gnb_right{
+    position: absolute;
+    right: 50px; top: 30px;
+}
+#nav .gnb_right li{
+    float: left;
+}
+#nav .gnb_right li a{
+    display: block;
+    padding: 11px 20px;
+    font-size: 14px;
+}
+#nav .gnb_right li.gr1{
+    margin-right: 10px;
+}
+#nav .gnb_right li.gr1 a{
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+#nav .gnb_right li.gr1 a:hover{
+    background-color: #f4f4f4;
+    color: #000;
+}
+#nav .gnb_right li.gr2{}
+#nav .gnb_right li.gr2 a{
+    background-color: #404b57;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+#nav .gnb_right li.gr2 a:hover{
+    background-color: #000;
+
+}
+
+#nav .gnb_search{
+    position: absolute;
+    right: 290px;top: 25px;
+    width: 50px; height: 50px;
+    background: url(../img/gnb_search.png) no-repeat;
+}
+#nav .gnb_event{
+    text-transform: uppercase; 
+    /*대문자로변환
+    capitalize 첫글자만 대문자
+    lowercase 모두 소문자
+    uppercas 모두 대문자 */
+    position: absolute;
+    left: 20px; top:-35px;
+    background-color:  #3c3f44;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 23px 2px;
+    line-height: 30px;
+}

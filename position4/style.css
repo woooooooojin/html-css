@@ -84,19 +84,177 @@
     background-color: #DFD3C3;
     width: 23.5%; /*{전체100% - (2%*3)} / 4개*/
     float: left;
-    height: 150px;
+    height: 200px;
     margin-right: 2%;
+    position: relative;
 }
-
-.전체 .둘째 .둘자1{
-   
-}
-.전체 .둘째 .둘자2{
-   
-}
-.전체 .둘째 .둘자3{
-   
-}
-.전체 .둘째 .둘자4{
+.전체 .둘째>div.둘자4{
     margin-right: 0;
 }
+.전체 .둘째>div>div{/*둘째 자식의 자식*/
+    position: absolute;
+    left: 50%; top:50%;
+    background-color: darksalmon;
+    transform: translate(-50%,-50%);
+    height: 40px; width: 100px;
+    text-align: center;
+    line-height: 40px; /*글자가 한줄일때 높이와 같은값으로 지정하면 가운데로옴*/
+}
+
+.전체 .둘째>div>div.둘손2{
+    left: auto; top: auto;/*left top 값 적용x*/
+    transform: none; 
+    right: 0; bottom: 0;
+}
+.전체 .둘째>div>div.둘손3{
+    left: auto; top: auto;
+    transform: none;
+    right: 0; top: 0;
+}
+.전체 .둘째>div>div.둘손4{
+    left: auto; top: auto;
+    transform: none;
+    left: 0; bottom: 0;
+}
+
+.전체 .셋째{
+    background-color: #DAE2B6;
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    
+}
+.전체 .셋째>div{
+    background-color: #F4EAD5;
+    width: 45%;
+    float: left;
+    height: 200px;
+    
+}
+.전체 .셋째>div.세자1{
+    margin-right: 10%;
+    position: relative;
+    overflow: hidden; 
+}
+.전체 .셋째>div.세자1>div{
+    position: absolute;
+    left: 0; top: 0; height: 100%; width: 100%;
+}
+.전체 .셋째>div.세자1>div h4{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255,255,255,0.3);
+    color: #fff; font-size: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.전체 .셋째>div.세자1>div.세손1{
+    background-image: url(img/img1.jpg);
+    background-size: cover;
+    z-index: 10;
+    left: 100%;
+    transition: 0.3s;
+}
+.전체 .셋째>div.세자1:hover>div.세손1{
+    left: 0;
+}
+
+.전체 .셋째>div.세자1>div.세손2{
+    background-image: url(img/img2.jpg);
+    background-size: cover;
+     
+}
+
+.전체 .셋째 .세자2{
+    position: relative;
+    overflow: hidden;
+}
+.전체 .셋째 .세자2 video{
+    width: 100%;
+    position: absolute; /*포지션으로 정중앙으로 위치시킬수 있다.*/
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.전체 .넷째{
+    background-color: #E8F3D6;
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    
+    
+}
+.전체 .넷째>div{
+    background-color: #FCF9BE;
+    width: 45%;
+    float: left;
+    height: 200px;
+
+}
+.전체 .넷째 .네자1{
+    margin-right: 10%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.전체 .넷째 .네자1 .네손1 {
+    
+    background-image: url(img/img1.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+     top: 0;
+    
+
+}
+.전체 .넷째 .네자1 .네손2{
+    
+    background-image: url(img/img2.jpg);
+    background-size: cover;
+    left: 100%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+     top: 0;
+     transition: 0.3s;
+     z-index: 10;
+
+}
+.전체 .넷째 .네자1:hover .네손2{
+    left: 0;
+}
+
+.전체 .넷째 .네자1>div h4{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:rgba(255,255,255,0.3);
+    color: #222;
+    padding: 10px 30px;
+    border-radius: 10px;
+
+}
+
+
+
+
+.전체 .넷째 .네자1>div h4
+
+
+
+
+
+
+
+
+
+
