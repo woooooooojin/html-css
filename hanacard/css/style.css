@@ -76,8 +76,132 @@ font-family: 'Hana B'; */
     
 }
 
-/*banner*/
+/*banner 1/18*/
 .ban_left{}
+.ban_left .ob{
+    position: absolute;
+
+}
+.ban_left .ob.ob1{/*구름1*/
+    left: 151px; top:161px;
+    animation: gulum 3s 0.3s linear infinite both; /*애니메이션 이름 지속시간 지연시간*/
+}
+.ban_left .ob.ob2{/*구름2*/
+    left: 120px; top: 133px;
+    animation: gulum 3s 0.6s linear infinite both;
+}
+.ban_left .ob.ob3{/*달력*/
+    left: 208px; top: 78px;
+    animation: down 0.5s 0.5s both;
+
+}
+.ban_left .ob.ob4{/*쇼핑할땐*/
+    left: 250px; top: 112px;
+    animation: left 0.5s 0.7s both; 
+}
+.ban_left .ob.ob5{/*타이틀*/
+    left: 250px; top: 140px;
+    animation: left 0.5s 0.9s both;
+}
+.ban_left .ob.ob6{/*1*/
+    left: 264px; top: 213px;
+    animation: down-long 0.5s 0.7s both;
+}
+.ban_left .ob.ob7{/*1*/
+    left: 320px; top: 213px;
+    animation: down-long 0.5s 0.9s both;
+}
+.ban_left .ob.ob8{/*우산*/
+    left: 433px; top: 302px;
+    animation: tl 0.3s 2.8s both;
+}
+.ban_left .ob.ob9{/*슈트케이스*/
+    left: 355px; top: 317px;
+    animation: down-small 0.3s 2.7s both;
+}
+.ban_left .ob.ob10{/*자동차*/
+    left: 220px; top: 343px;
+    animation: left-b 0.6s 1.8s both;
+}
+.ban_left .ob.ob11{/*선물*/
+    left: 376px; top: 268px;
+    animation: down-small 0.3s 2.9s both;
+}
+.ban_left .ob.ob12{/*박스*/
+    left: 360px; top: 284px;
+    animation: down-small 0.3s 3s both;
+}
+.ban_left .ob.ob13{/*가방*/
+    left: 415px; top: 274px;
+    animation: down-small 0.3s 3.2s both;
+}
+.ban_left .ob.ob14{/*바람1*/
+    left: 501px; top: 370px;
+    animation: scale 2s 3.4s infinite both;
+    transform-origin: left top;
+}
+.ban_left .ob.ob15{/*바람2*/
+    left: 501px; top: 370px;
+    animation: scale 2s 3.3s infinite both;
+    transform-origin: left top;
+}
+.ban_left .ob.ob16{/*원*/
+    left: 485px; top: 119px;
+    animation: rotate 3s linear infinite;
+    
+}
+.ban_left .ob.ob17{
+    left: 378px; top: 189px;
+    animation: scale 3s 4s both;
+    transform-origin: left center;
+}
+
+@keyframes gulum{ 
+    0%{transform: translateX(-10px);}
+    20%{transform: translateX(0px);}
+    50%{transform: translateX(10px);}
+    75%{transform: translateX(0px);}
+    100%{transform: translateX(-10px);}
+}
+@keyframes down{
+    0%{transform: translateY(-300px); opacity: 0;/*투명도*/}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+@keyframes down-long{
+    0%{transform: translateY(-500px);opacity: 0;}
+    50%{transform: translateY(30px);opacity: 1;}
+    100%{transform: translateY(0px);opacity: 1;}
+}
+@keyframes down-small{
+    0%{transform: translateY(-100px); opacity: 0;/*투명도*/}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+@keyframes left{
+    0%{transform: translateX(500px); opacity: 0;}
+    100%{transform: translateX(0px); opacity: 1;}
+}
+@keyframes left-b{
+    0%{transform: translateX(500px); opacity: 0;}
+    85%{transform: translateX(-180px); opacity: 1;}
+    100%{transform: translateX(0px); opacity: 1;}
+}
+@keyframes tl{
+    0%{transform: translate(110px,-100px); opacity: 0;}
+    100%{transform: translate(0px,0px); opacity:1;}
+}
+@keyframes scale{
+    0%{transform: scale(0); opacity: 0;}
+    85%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(1); opacity: 1;}
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(359deg);}
+}
+
+
+
+
 .ban_right{
     width: 600px;
     position: absolute;
