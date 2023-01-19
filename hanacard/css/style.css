@@ -403,3 +403,97 @@ font-family: 'Hana B'; */
     padding: 3px 23px 2px;
     line-height: 30px;
 }
+/*card*/
+#card{
+    padding-top: 60px; /*큰영역에서 공간을 줄때는 패딩을 준다*/
+}
+#card .card_img{
+    float: left;
+    width: 50%;
+    height: 285px;
+    background: #fff;
+}
+#card .card_desc{
+    float: left;
+    width: 50%;
+    height: 285px;
+    background: #eaebef;
+}
+
+/*.card_img*/
+.card_img{
+    padding: 18px 47px 0;
+    box-sizing: border-box;
+    position: relative; /*cardmore btn기준*/
+}
+.card_img h4{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 11px;
+    
+}
+.card_img .card_banner{}
+.card_img .card_banner ul{}
+
+.card_img .card_banner ul li{
+    float: left;
+    width: 148px;
+    margin-left: 30px;
+    text-align: center;
+}
+.card_img .card_banner ul li:first-child{
+    margin-left: 0;
+}
+
+.card_img .card_banner ul li a{}
+.card_img .card_banner ul li a img{
+    width: 100%;
+}
+.card_img .card_banner ul li a em{
+    font-size: 14px;
+    padding-top: 8px;
+    display: block;
+}
+
+.card_img .card_link{
+    margin-top: 30px;
+
+}
+.card_img .card_link ul{
+    
+}
+.card_img .card_link ul li{
+    float: left;
+    margin-right: 11px;
+}
+.card_img .card_link ul li:last-child{
+    margin-right: 0;
+}
+
+.card_img .card_link ul li a{
+    display: block; /*버튼전체공간 인식*/
+    border: 1px solid #e8e8e8;
+    font-size: 15px;
+    padding: 10px 11px;
+    transition: 0.3s;
+    
+}
+.card_img .card_link ul li a:hover{
+    border-color: #666;
+    color: #00907f;
+}
+
+
+.card_img .cardmore-btn{
+    position: absolute;
+    left: auto; /*ir효과 left값*/
+    right: -40px; top: 65px; width: 40px; height: 151px;
+    background: url(../img/btn_card_v01.png) no-repeat ; 
+}
+
+/*card desc*/
+.card_desc{}
+.card_desc .dl{}
+.card_desc .dl dt{}
+.card_desc .dl dt dd{}
+.card_desc .dl dt dd.cd1{}
