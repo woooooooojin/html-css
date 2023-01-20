@@ -492,8 +492,24 @@ font-family: 'Hana B'; */
 }
 
 /*card desc*/
-.card_desc{}
-.card_desc .dl{}
-.card_desc .dl dt{}
-.card_desc .dl dt dd{}
-.card_desc .dl dt dd.cd1{}
+.card_desc{
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+
+}
+.card_desc dl{}
+.card_desc dl dt{
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+}
+.card_desc dl dd{}
+.card_desc dl dd.cd1{
+    font-size: 23px;
+    margin: 26px 0 45px;
+}
+.card_desc dl dd.cd1::before, .card_desc dl dd.cd1::after{
+    content: "''";
+    color: #00907f;  
+}
