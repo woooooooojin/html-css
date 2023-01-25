@@ -1,0 +1,18 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+    height: 500px;
+    
+    align-items: stretch; /*기본값*/
+    align-items: flex-start; /*시작점으로 정렬*/
+    align-items: flex-end; /*끝으로 정렬*/
+    align-items: center; /*중앙으로 정렬*/
+    align-items: baseline; /*텍스트 베이스라인으로 정렬*/
+    
+
+}
+
+.item:nth-child(4){
+    font-size: 30px;
+}

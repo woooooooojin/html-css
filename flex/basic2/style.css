@@ -1,0 +1,15 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+    /* 메인축 기준으로 이동 */
+    justify-content: flex-start; /*기본값*/
+    justify-content: flex-end; /*끝으로*/
+    justify-content: center; /*중앙으로*/
+    justify-content: space-between; /*n등분*/
+    justify-content: space-around; /*좌우 공백같음*/
+    justify-content: space-evenly; /*between이랑 같지만 처음과 끝의 공간도 같음 */
+
+
+
+}

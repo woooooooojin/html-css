@@ -513,3 +513,58 @@ font-family: 'Hana B'; */
     content: "''";
     color: #00907f;  
 }
+.card_desc dl dd.cd2{}
+.card_desc dl dd.cd2 ul{}
+.card_desc dl dd.cd2 ul li{
+    display: inline;
+    
+}
+.card_desc dl dd.cd2 ul li a{
+    display: inline-block;/*블럭요소 섞여있어서 너비 조절가능*/
+    padding: 8px 3px;
+    border: 1px solid #fff; /*공간을 잡고 있게 해야함*/
+    background-color: #fff;
+    transition: 0.3s;
+}
+.card_desc dl dd.cd2 ul li a:hover{
+    border: 1px solid #bbb;
+}
+
+/* event */
+#event{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+#event>div{
+    float: left;
+}
+/* event_box1 */
+.event_box1{}
+.event_box1>div{
+    width: 300px;
+    height: 188px;
+    box-sizing: border-box;
+    padding-top: 110px; /*background img넣기위해 글자를 아래로 밀기 borderbox;영역이 커지지않음*/
+}
+.event_box1>div .eb_desc{
+    font-size: 16px;
+    font-weight: 300;
+}
+.event_box1>div .eb_tit{
+    font-size: 20px;
+
+}
+
+.event_box1>div.eb_banner1{
+    background: #01937f url(../img/event_icon1.png) no-repeat center 25px;
+    
+}
+.event_box1>div.eb_banner2{
+    background: #766e9c url(../img/event_icon2.png) no-repeat center 25px;
+
+}
+.event_box1>div.eb_banner3{
+    background: #43587d url(../img/event_icon3.png) no-repeat center 25px;
+
+}

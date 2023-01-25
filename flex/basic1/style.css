@@ -1,0 +1,26 @@
+@import url(basic.css);
+
+.container {
+	display: flex;
+	/* display: inline-flex; */
+    flex-direction: row; /*기본값*/
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    
+    /* 줄넘김처리 */
+    flex-wrap: nowrap; /*기본값*/
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow: flex-direction flex-wrap; */
+    flex-flow: row nowrap;
+    flex-flow: row wrap;
+}
+.item:nth-child(1){
+    /* white-space: nowrap; */
+
+}
+.item{
+    width: 40%;
+}
