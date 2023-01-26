@@ -1,0 +1,22 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+}
+   
+
+.item{
+   
+    flex-grow: 1;
+    flex-shrink: 1;/*기본값*/
+    flex-basis: 150px;
+    
+
+
+}
+.item:nth-child(1){
+    /* width: 150px;
+    flex-shrink: 0;  */
+    /*150이하로 줄어들지 않음*/
+    flex-shrink: 2;
+}

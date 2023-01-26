@@ -1,0 +1,23 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+
+    /* 여러 행 정렬 */
+    align-content: stretch;/*기본값*/
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: center;
+    align-content: space-evenly;
+
+}
+.item{
+    height: 100px;
+
+    width: 40%;
+
+}

@@ -1,0 +1,13 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+}
+
+.item{
+    
+    /* flex-basis: auto; */
+    /* flex-basis: 100px; */
+    width: 100px;
+    flex-basis: auto;
+}

@@ -1,0 +1,20 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+}
+   
+
+.item{
+    flex-grow: 0;/*default*/
+    width: 100px;
+    flex-grow: 1;
+    /*가지고 있는 너비보다 커질수있다*/
+    
+
+
+}
+.item:nth-child(1){flex-grow: 1;}
+.item:nth-child(2){flex-grow: 2;}
+.item:nth-child(3){flex-grow: 1;}
+   

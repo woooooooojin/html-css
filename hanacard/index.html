@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/> <!--slick cdn css-->
     <link rel="stylesheet" href="css/style.css">
     <!-- 하나폰트 -->
     <link rel="stylesheet" href="css/font/stylesheet.css">
@@ -248,7 +249,26 @@
                         </div><!--event box1 end-->
                         
                         <div class="event_box2">
-                            <div class="eb_banner4"></div><!--eb_banner4 end-->
+                            <div class="eb_banner4">
+                               <div class="eb_icon">
+                                <ul class="clearfix">
+                                    <li class="ei1">
+                                        <a href="#" title="새창열림">Event <i class="fas fa-plus"></i></a></li>
+                                    <li class="ei2">
+                                        <a href="#" title="새창열림">당첨자 확인</a></li>
+                                </ul>
+                               </div><!--eb_icon end-->
+                               <div class="eb_slider">
+                                  <div class="eb_slider_list">
+                                    <div>
+                                        <img src="img/230125.png" alt="CU, GS25, 세븐일레븐, 이마트24, 미니스톱 5대 편의점에서 QR결제하고 최대 2천 하나머니 적립 받자! 2023.01.01~2023.01.31">
+                                    </div>
+                                    <div>
+                                        <img src="img/230125_2.jpg" alt="파리크라상 QR 결제하면 4천원 즉시 할인 2023.01.01~2023.01.31">
+                                    </div>
+                                  </div>
+                               </div>
+                            </div><!--eb_banner4 end-->
                             <div class="eb_banner5"></div><!--eb_banner4 end-->
 
                         </div><!--event box2 end-->
@@ -267,7 +287,14 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script><!--slick cdn js-->
+    <script>$(document).ready(function(){
+        $('.eb_slider_list').slick({
+            arrows:false, dots:true, fade:true, autoplay:true, pauseOnHover:false,
+        });
+      });
+      </script>
 </body>
 
 </html>
