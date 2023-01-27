@@ -1,0 +1,19 @@
+@import url(basic.css);
+
+.container{
+    display: flex;
+
+    
+}
+   
+
+.item{
+  width: 150px;
+
+
+}
+.item:last-child{
+   
+   margin-left: auto;
+}
+
