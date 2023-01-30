@@ -10,18 +10,26 @@ font-family: 'Hana B'; */
 #header{
     background-color: #fff;
 }
+
 /*banner*/
 #banner{
     background-color: #a0d1ee;
     height: 470px;
 
 }
+
 /*contents layout*/
 #contents{}
 #cont1{
     height: 940px;
     background-color: #f5f6f8;
     
+}
+
+/* cont2 */
+#cont2{
+    height: 555px;
+    background-color: #efefef;
 }
 
 /*container*/
@@ -742,3 +750,94 @@ font-family: 'Hana B'; */
 .event_box3 .eb_slider2 .slick-dots li.slick-active button{
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+.event_box3 p{/*p태그 블럭요소*/
+    font-size: 16px;
+    padding: 35px 0 15px; /*상 좌우 하*/
+}
+.event_box3 .es2_btn{
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+/* #life */
+#life{
+    height: 330px; /*부모가 높이값을 가지고 있으면 float 써도 안깨짐*/
+    background-color: steelblue;
+}
+
+#life .life_menu{
+    width: 50%;
+    float: right;
+    z-index: 20;
+    position: relative; /*zindex 는 position이 있어야함*/
+}
+#life .life_menu ul{}
+#life .life_menu ul li{
+    float: left;
+    width: 25%;
+    margin-top: 60px;
+    
+}
+#life .life_menu ul li a{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    transition: 0.3s; /*0.3s = 300ms, 1s=1000ms*/
+}
+#life .life_menu ul li a:hover{
+    background-color: #cc3b63;
+    color: #fff;
+    
+}
+#life .life_style{
+    position: relative;
+    height: 100%;
+}
+#life .life_style li{
+    position: absolute;
+    left: 0; top: 0; /*right: 0; bottom: 0;*/
+    width: 100%; height: 100%;
+}
+#life .life_style li:nth-child(1){
+    background: url(../img/mc_service_bg02.png) no-repeat;
+}
+#life .life_style li:nth-child(2){
+    background: url(../img/mc_service_bg03.png) no-repeat;
+}
+#life .life_style li:nth-child(3){
+    background: url(../img/mc_service_bg04.png) no-repeat;
+}
+#life .life_style li:nth-child(4){
+    background: url(../img/mc_service_bg05.png) no-repeat;
+}
+#life .life_style .text{}
+#life .life_style .text a{
+    display: block;
+    width: 50%;
+    font-size: 50px;
+    padding: 60px 0 0 30px; /*상 오른족 아래 왼쪽*/
+}
+#life .life_style .text a em{
+    font-size: 18px;
+    color: #000;
+    display: block;
+    letter-spacing: 2px; /*자간*/
+}
+
+#life .life_btn{
+    position: absolute;
+    left: 0; bottom: 0;
+    right: 0; /* width: 100%; */
+    background-color: #fff;
+}
+#life .life_btn ul{}
+#life .life_btn ul li{}
+#life .life_btn ul li a{}
