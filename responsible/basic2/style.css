@@ -1,0 +1,46 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto; /*가운데*/
+}
+header{
+    height: 150px;
+    background-color: #E8F3D6;
+}
+aside{
+    /*형이 float이 있으면 동생은 float이 있어야함*/
+    /*동생이 float이 있으면 형은 꼭 float이 필요한건 아님*/
+    float: left;
+    width: 400px;
+    height: 700px;
+    background-color: #FCF9BE;
+}
+section{
+    float: left;
+    width: 800px;
+    height: 700px;
+    background-color: #FFDCA9;
+}
+footer{
+    clear: both;
+    width: 100%;
+    height: 150px;
+    background-color: #FAEAB1;
+    clear: both;
+}
+
+@media (max-width:1200px){
+    #wrap{
+        width: 95%;
+    }
+    aside{
+        width: 30%;
+    }
+    section{
+        width: 70%;
+    }
+
+}/*max-width:!200px*/

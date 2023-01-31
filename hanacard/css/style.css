@@ -767,6 +767,7 @@ font-family: 'Hana B'; */
 #life{
     height: 330px; /*부모가 높이값을 가지고 있으면 float 써도 안깨짐*/
     background-color: steelblue;
+    position: relative; /*life_btn의 기준*/
 }
 
 #life .life_menu{
@@ -834,10 +835,87 @@ font-family: 'Hana B'; */
 
 #life .life_btn{
     position: absolute;
-    left: 0; bottom: 0;
+    left: 0; bottom: 86px;
     right: 0; /* width: 100%; */
     background-color: #fff;
 }
-#life .life_btn ul{}
-#life .life_btn ul li{}
-#life .life_btn ul li a{}
+#life .life_btn ul{
+
+}
+#life .life_btn ul li{/*li 블럭요소*/
+    float: left;
+    width: 16.6666%;
+    position: relative;/*#life .life_btn ul li::after의 기준*/
+
+}
+#life .life_btn ul li a{
+    font-size: 16px;
+    color: #333;
+    display: block;
+    padding: 13px 10px;
+    text-align: center; /*자식인 인라인요소에게 주지말고 부모 블럭요소에게 줄것*/
+}
+#life .life_btn ul li::after{
+    content: "";
+    position: absolute; /* absolute되면 원래 가진 성격을 잃어버림 넓이와 높이 인식*/
+    left: 0; top: 18px;
+    width: 1px; 
+    height: 14px;
+    background-color: #ccc;
+
+}
+#life .life_btn ul li:first-child::after{
+    width: 0; 
+    height: 0;
+}
+/*app*/
+#app{}
+#app .app_left{
+    float: left;
+    width: 49%;
+    height: 200px;
+    background: #fff url(../img/mc_service_banner01_img.jpg) no-repeat 50px 45px;
+    
+}
+
+
+#app .app_right{
+    float: right;
+    width: 50%;
+    height: 200px;
+    background-color: #ddd;
+}
+
+#app .app_left ul{
+    overflow: hidden; 
+    /*float에 의한 부모의 깨짐현상 방지
+    1. 부모의 높이 값을 준다
+    1. clear:both >> after 영역사용
+    3. 막내영역을 만들어서 clear:both 사용
+    4. 부모에게 overflow:hidden 사용 (상황에따라서)*/
+    
+    padding: 45px 0 0 290px; /*li 위치이동*/
+}
+#app .app_left ul li{
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+#app .app_left ul li a{}
+#app .app_left ul li a img{
+    transform: scale(1.05);
+}
+
+#app .app_left .al_text{}
+#app .app_left .al_text a{}
+#app .app_left .al_text a strong{
+    display: block;
+    font-size: 20px;
+    color: #000;
+    line-height: 34px;
+}
