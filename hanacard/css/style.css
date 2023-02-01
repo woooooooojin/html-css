@@ -25,6 +25,8 @@ font-family: 'Hana B'; */
     background-color: #f5f6f8;
     
 }
+/*#footer*/
+#footer{}
 
 /* cont2 */
 #cont2{
@@ -894,7 +896,7 @@ font-family: 'Hana B'; */
     3. 막내영역을 만들어서 clear:both 사용
     4. 부모에게 overflow:hidden 사용 (상황에따라서)*/
     
-    padding: 45px 0 0 290px; /*li 위치이동*/
+    padding: 45px 0 10px 290px; /*li 위치이동*/
 }
 #app .app_left ul li{
     float: left;
@@ -911,11 +913,122 @@ font-family: 'Hana B'; */
     transform: scale(1.05);
 }
 
-#app .app_left .al_text{}
+#app .app_left .al_text{
+    font-size: 16px;
+    color: #666;
+    padding-left: 290px;
+}
 #app .app_left .al_text a{}
 #app .app_left .al_text a strong{
     display: block;
     font-size: 20px;
     color: #000;
     line-height: 34px;
+}
+
+#app .app_right{}
+#app .app_right>div{
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    height: 70px;
+}
+#app .app_right .ar_ban1{
+    width: 25%;
+    background: #2f4359 url(../img/service_ban01.png) no-repeat center 50px;
+    padding-top: 130px;/*글자가 밀려서 아래로 떨어짐, 글자이동할때 패딩쓰기*/
+}
+#app .app_right .ar_ban2{
+    width: 25%;
+    background: #00907f url(../img/service_ban02.png) no-repeat center 50px;
+    padding-top: 130px;
+}
+#app .app_right .ar_ban3{
+    width: 50%;
+    background-color: #fff;
+    padding: 20px 20px 19px;
+    box-sizing: border-box;
+    height: auto;/*#app .app_right>div의 높이 70px의 영향을 안받게 함*/
+    
+    
+    
+}
+#app .app_right .ar_ban3 .ban3_text{
+    font-size: 15px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 20px 30px 75px;
+    background: url(../img/service_ban03.png) no-repeat 10px 40px;
+
+
+}
+#app .app_right .ar_ban3 .ban3_text h5{
+    font-size: 20px;
+    color: #000;
+    padding-bottom: 5px;
+}
+#app .app_right .ar_ban3 .ban3_slider{
+    color: #000;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+/*footer*/
+#footer{}
+#footer #footer_notice{
+    height: 71px;
+    line-height: 71px;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+#footer #footer_info{
+    height: 242px;
+    background-color: #f7f8f9;
+}
+
+/* #footer_notice */
+
+.notice{}
+.notice h3{
+    float: left;
+    font-size: 15px;
+    margin-right: 30px;
+}
+.notice h3 i{
+    font-size: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 4px;
+    vertical-align: 2px;/*글자를 수직으로 정렬 인라인요소에 적용가능*/
+}
+.notice ul{
+    float: left;
+}
+.notice ul li{
+    float: left;
+    margin-right: 50px;
+    /*말줄임표(...)*/
+    overflow: hidden;
+    white-space: nowrap; /*글자를 다음줄로 넘기지않게함*/
+    text-overflow: ellipsis;/*글자가 영역을 넘기면 형태를 무너트려라*/
+    width: 400px; /*넓이가 있어야 말줄임표(...)가 생김*/
+}
+.notice ul li a{
+    color: #666;
+    font-size: 15px;
+    position: relative;
+    padding-left: 8px;/*점을 붙이기위해 글자 밀기*/
+
+}
+.notice ul li a::after{
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #666;
+    position: absolute;
+    left: 0; top: 10px;
+    
 }

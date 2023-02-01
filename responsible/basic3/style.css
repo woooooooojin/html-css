@@ -1,0 +1,59 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+#wrap{
+    margin: 0 auto;
+    font-size: 2vw; /*화면의 넓이의 2%*/
+}
+header{
+    background-color: #7286D3;
+    height: 150px;
+}
+aside{
+    background-color: #8EA7E9;
+    width: 30%; 
+    float: left;
+    height: 700px;
+}
+section{
+    background-color: #E5E0FF;
+    width: 40%; 
+    float: left;
+    height: 700px;
+}
+article{
+    background-color: #FFF2F2;
+    width: 30%; 
+    float: left;
+    height: 700px;
+}
+footer{
+    background-color: #EAC7C7;
+    clear: both;/*깨짐방지*/
+    height: 150px;
+}
+
+@media (max-width:1200px){
+    aside{
+        width: 40%;
+    }
+    section{
+        width: 60%;
+    }
+    article{
+        width: 100%;
+        height: 300px;
+    }
+
+}/*maxwidth 1200px*/
+
+@media (max-width:768px){
+    aside{
+        width: 100%;
+        height: 300px;
+    }
+    section{
+        width: 100%;
+        height: 300px;
+    }
+}

@@ -328,11 +328,13 @@
                                     <div>
                                         <img src="img/img_mc05_banner03.png" alt="나만의 혜택3">
                                     </div>
-                                    
-                                </div><!--card end-->
+
+                                </div>
+                                <!--card end-->
                                 <p>나만의 특별한 혜택을 <br> 로그인 후 확인하세요</p>
                                 <a href="#" class="es2_btn">혜택보기</a>
-                            </div><!--eb-slider2 end-->
+                            </div>
+                            <!--eb-slider2 end-->
 
                         </div>
                         <!--event box3 end-->
@@ -351,37 +353,39 @@
                                 <li><a href="#">공연예매</a></li>
                                 <li><a href="#">영화예매</a></li>
                             </ul>
-                        </div><!--life_menu end-->
+                        </div>
+                        <!--life_menu end-->
                         <ul class="life_style">
                             <li>
                                 <div class="text">
                                     <a href="#">
-                                    <em>라이프 스타일</em>
-                                    Shopping</a>
+                                        <em>라이프 스타일</em>
+                                        Shopping</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="text">
                                     <a href="#">
-                                    <em>라이프 스타일</em>
-                                    Travel</a>
+                                        <em>라이프 스타일</em>
+                                        Travel</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="text">
                                     <a href="#">
-                                    <em>라이프 스타일</em>
-                                    Concert</a>
+                                        <em>라이프 스타일</em>
+                                        Concert</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="text">
                                     <a href="#">
-                                    <em>라이프 스타일</em>
-                                    Movie</a>
+                                        <em>라이프 스타일</em>
+                                        Movie</a>
                                 </div>
                             </li>
-                        </ul><!--ul.life_stlye end-->
+                        </ul>
+                        <!--ul.life_stlye end-->
                         <div class="life_btn">
                             <ul class="clearfix">
                                 <li><a href="#">이용알림서비스</a></li>
@@ -391,9 +395,11 @@
                                 <li><a href="#">스마일신용지킴이</a></li>
                                 <li><a href="#">하나T-Sign서비스</a></li>
                             </ul>
-                        </div><!--life_btn end-->
-                    </div><!--#life end-->
-                    
+                        </div>
+                        <!--life_btn end-->
+                    </div>
+                    <!--#life end-->
+
                     <div id="app" class="clearfix">
                         <div class="app_left">
                             <ul>
@@ -407,15 +413,62 @@
                                     <strong>하나 1Q 페이</strong>지갑없이 즐기는 온/오프라인 결제
                                 </a>
                             </div>
-                        </div><!--app_left end-->
-                        <div class="app_right"></div><!--app_right end-->
+                        </div>
+                        <!--app_left end-->
+                        <div class="app_right clearfix">
+                            <div class="ar_ban1">공인인증 센터</div>
+                            <!--ar_ban1 end-->
+                            <div class="ar_ban2">E-STYLE HANA</div>
+                            <!--ar_ban2 end-->
+                            <div class="ar_ban3">
+                                <div class="ban3_text">
+                                    <h5>금융 소비자 보호</h5>
+                                    소비자보호정보를 한눈에 금융소비자 보호 포털
+                                </div>
+                                <!--ban3_text end-->
+                                <div class="ban3_slider">
+                                    고객응대직원보호
+                                </div>
+                                <!--ban3_slider end-->
 
-                    </div><!--#app end-->
-                    
-                </div><!--container end-->
-            </div><!--cont2 end-->
+                            </div>
+                            <!--ar_ban3end-->
+                        </div>
+                        <!--app_right end-->
+
+                    </div>
+                    <!--#app end-->
+
+                </div>
+                <!--container end-->
+            </div>
+            <!--cont2 end-->
         </div>
         <!--content end-->
+        <footer id="footer">
+            <div id="footer_notice">
+                <div class="container">
+                    <div class="notice clearfix">
+                        <h3>알려드립니다. <i class="fas fa-plus"></i></h3>
+                        <ul>
+                            <li><a href="#">[공지]하나카드 여행서비스
+                                    입점 '여행박사' 제휴 종료 안내 하나카드 여행서비스
+                                    입점 '여행박사' 제휴 종료 안내</a></li>
+                            <li><a href="#">[공지] 순천에코지오카드 롯데시네마 순천덤 할인 서비스 종료</a></li>
+                        </ul>
+                        <a href="#" class="notice_btn">서비스 변경 안내</a>
+                    </div><!--notice end-->
+                </div><!--container end-->
+            </div>
+            <!--footer_notice end-->
+            <div id="footer_info">
+                <div class="container">footer_info</div>
+
+            </div>
+            <!--footer_info end-->
+
+        </footer>
+        <!--footer end-->
     </div>
     <!--wrap end-->
 
@@ -436,26 +489,30 @@
             });
         });
     </script>
-    
+
     <script>
-         $('.card').slick({
+        $('.card').slick({
             arrows: false,
-                dots: true,
-                fade: true,
-                autoplay: true,
-                pauseOnHover: false,
-             });
-            //life버튼
-            var tab = $('.life_menu ul li');
-            var menu = $('.life_style li');
-            
-            tab.mouseover(function(){
-                var target = $(this); //내가마우스오버한 li를 잡아줌
-                var index = target.index();
-                console.log(index)
-                menu.css({opacity:0})
-                menu.eq(index).css({opacity:1})
-            });
+            dots: true,
+            fade: true,
+            autoplay: true,
+            pauseOnHover: false,
+        });
+        //life버튼
+        var tab = $('.life_menu ul li');
+        var menu = $('.life_style li');
+
+        tab.mouseover(function () {
+            var target = $(this); //내가마우스오버한 li를 잡아줌
+            var index = target.index();
+            console.log(index)
+            menu.css({
+                opacity: 0
+            })
+            menu.eq(index).css({
+                opacity: 1
+            })
+        });
     </script>
 </body>
 
