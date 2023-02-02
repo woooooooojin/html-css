@@ -1,0 +1,12 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.container{
+    border: 2px solid red;
+    background-color: #E1D7C6;
+
+}
+
+.item{
+    border: 2px solid #000;
+    background-color: #A0C3D2; 
+}

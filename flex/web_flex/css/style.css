@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+body{
+    background-color: #eee;
+}
+.wrap{}
+.header{
+    height: 80px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.header .website_title{}
+.header .search-form{
+    width: 250px;
+    margin-left: auto;
+}
+.header .search-form input[type="search"]{
+    border-radius: 5px;
+    
+}

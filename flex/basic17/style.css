@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import url(basic.css);
+
+
+.container{
+    
+    display: flex;
+}
+/*시각적순서일뿐 구조가 바뀌지는 않는다*/
+.item:nth-child(1){order: 1;}
+.item:nth-child(2){order: 3;}
+.item:nth-child(3){order: 2;}
