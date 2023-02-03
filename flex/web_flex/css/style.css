@@ -4,13 +4,17 @@
 body{
     background-color: #eee;
 }
-.wrap{}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
 .header{
     height: 80px;
     background-color: gray;
     display: flex;
     align-items: center;
     padding: 0 20px;
+    width: 100%;
 }
 .header .website_title{}
 .header .search-form{
@@ -19,5 +23,58 @@ body{
 }
 .header .search-form input[type="search"]{
     border-radius: 5px;
+    border: none;
+    outline: none; /*검색박스에 커서올리면 아웃라인 표시 없애기*/
+}
+.header .search-form input[type="submit"]{
+    border-radius: 5px;
+    border: none;
+    outline: none; /*검색박스에 커서올리면 아웃라인 표시 없애기*/
+    width: 60px;
+    background-color: gold;
+}
+
+/*menu*/
+
+.menu{
+    display: flex;
+    width: 100%;
+}    
+
+.menu .menu-item{
+    width: 25%;
+    background-color: gold;
+    transition: 0.3s;
+    text-align: center;
     
 }
+.menu .menu-item:hover{
+    width: 35%;
+    background-color: skyblue;
+    
+}
+.menu .menu-item .menu-link{
+    display: block;
+    font-size: 20px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+/*primary*/
+.primary{}
+.primary .card-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.primary .card-list .card-item{
+    width: 33.3333%;
+    padding: 0 15px;
+}
+.primary .card-list .card-item .card-image{
+    background: url(../img1.jfif) no-repeat center center;
+    /*padding과 margin의 상하좌우의 공간을 백분률로 줄때 기준이 부모의 넓이값*/
+    height: 0;
+    padding-bottom: 60%;
+    
+}
+.primary .card-list .card-item .card-desc{}
+

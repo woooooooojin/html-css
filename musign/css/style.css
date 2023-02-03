@@ -1,30 +1,74 @@
 @charset "UTF-8";
-/*@import url(reset.css);*/
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
-/* *{margin: 0; padding: 0;} */
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Handel Gothic'; */
 
-div {
-    height: 100vh;
+/*layout*/
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+.en{font-family: 'Handel Gothic';}
+.en_s{font-family: 'Dancing Script', cursive;}
+
+.clearfix::after{content: ""; display: block; clear: both;}
+
+/*header*/
+header{}
+.innerheader{
+    max-width: 1720px;
+    margin: 0 auto; /*가운데*/
+    height: 110px;
+    line-height: 110px;
+}
+.innerheader .logo{float: left;}
+.innerheader .logo a{
+    display: block; /*넓이인식*/
+    width: 100%; 
+    height: 100%;
+}
+.innerheader .logo a img{}
+
+.innerheader .mainmenu{float: right;}
+
+.innerheader .mainmenu .gnb{float: left;}
+.innerheader .mainmenu .gnb li{
+    float: left;
+    margin: 0 20px;
+}
+.innerheader .mainmenu .gnb li a{
+    display: block;
+    color: #555;
 }
 
-.one {
-    background-color: cadetblue;
-    transform: scale(0.5);
-    transition: 0.5s;
+.innerheader .mainmenu .sns{
+    float: left;
+    margin-left: 300px;
 }
+.innerheader .mainmenu .sns li{
+    float: left;
+    margin: 0 20px;
+}
+.innerheader .mainmenu .sns li a{
+    display: block;
+    padding: 0 10px;
+}
+.innerheader .mainmenu .sns li a img{}
 
-.one.animate__motion {
-    background-color: gray;
-    transform: scale(1);
+/*visual*/
+.visual{}
+.visual .mainImg{
+    float: left;
+    width: 50%;
 }
+.visual .mainImg{}
 
-.two {
-    background-color: darkolivegreen;
-    transform: scale(0.5);
-    transition: 0.5s;
+.visual .mainTxt{
+    float: left;
+    width: 50%;
 }
-
-.two.animate__motion {
-    background-color: lightpink;
-    transform: scale(1);
-}
+.visual .mainTxt{}
