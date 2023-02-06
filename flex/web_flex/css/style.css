@@ -68,13 +68,70 @@ body{
 .primary .card-list .card-item{
     width: 33.3333%;
     padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;/*자식 card-image, card-desc*/
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 .primary .card-list .card-item .card-image{
     background: url(../img1.jfif) no-repeat center center;
     /*padding과 margin의 상하좌우의 공간을 백분률로 줄때 기준이 부모의 넓이값*/
     height: 0;
     padding-bottom: 60%;
+    width: 100%;
+    background-size: cover;
     
 }
-.primary .card-list .card-item .card-desc{}
+.primary .card-list .card-item .card-desc{
+    padding: 15px;
+    background-color: #fff;
+    flex-grow: 1; 
+
+}
+
+/*secondard*/
+.secondard{
+    width: 300px;
+    padding: 15px;
+} 
+.secondard-a, .secondard-b{
+    background-color: #fff;
+} 
+.info-list{}
+.info-list .info-list-item{
+    display: flex;
+    margin: 7px 0;
+}
+.info-list .info-list-item::before{
+    content: "●";
+    margin-right: 7px;
+
+}
+
+/*friend-list*/
+.friend-list{}
+.friend-list .user-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    /*말줄임표*/
+}
+.user-list{
+    margin-top: 35px;
+}
+.user-list .user-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.user-list .user-item .user-photo{
+    width: 50px;
+    height: 50px;
+    background: url(../img1.jfif) no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin-right: 7px;
+}
+
 

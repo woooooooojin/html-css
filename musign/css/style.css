@@ -60,15 +60,167 @@ header{}
 .innerheader .mainmenu .sns li a img{}
 
 /*visual*/
-.visual{}
+.visual{
+    max-width: 1720px;
+    margin: 0 auto;
+
+}
 .visual .mainImg{
     float: left;
     width: 50%;
 }
-.visual .mainImg{}
+.visual .mainImg img{
+    width: 90%;
+}
 
 .visual .mainTxt{
     float: left;
     width: 50%;
+    margin-top: 180px;
 }
-.visual .mainTxt{}
+.visual .mainTxt .tit{
+    font-size: 72px;
+}
+.visual .mainTxt .tit{}
+.visual .mainTxt .tit span.gray{
+    color: #ccc;
+}
+.visual .mainTxt .txt{
+    padding: 50px 0 0 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*타이틀,텍스트*/
+.tit{
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: normal;
+}
+.tit span{
+    display: block;
+}
+.tit span b{
+    font-weight: normal;
+}
+.tit .en_s{
+    font-size: 22px;
+    font-weight: normal;
+}
+.txt p{
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.txt p b{font-weight: normal;}
+
+.txt .moreBtn{
+    display: inline-block;
+    color: #333;
+    margin-top: 20px;
+    position: relative;/*more btn before의 기준*/
+    padding-left: 45px;
+    transform: skewX(-15deg) translateX(5px);/*기울기*/
+    transition: 0.3s;
+}
+.txt .moreBtn:hover{
+    transform: skewX(0deg) translateX(0px);
+    font-weight: bold;
+}
+.moreBtn::before{
+    content: "";
+    width: 42px;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    left: 0; top: 52%;
+}
+/* 타이틀,텍스트 end */
+
+/* 이미지 애니메이션 */
+.img.animate__motion{
+    animation: imgAni 1s;
+    position: relative; /*after 기준*/
+} 
+
+
+@keyframes imgAni{
+    0%{transform: translateY(50px);}
+    100%{transform: translateY(0px);}
+}
+.img.animate__motion::after{
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 0%; 
+    background-color: #fff;
+    animation:mask 1.2s ;
+    
+}
+/*높이를 이용한 animation */
+@keyframes mask{
+    0%{
+        height: 90%;
+    }
+    100%{
+        height: 0;
+    }
+}
+/* 이미지 애니메이션 end */
+
+/*텍스트 애니메이션*/
+.tit.animate__motion{}
+.tit.animate__motion span{
+    overflow: hidden;
+}
+.tit.animate__motion span b{
+    display: block;/*transform은 인라인요소에서 적용안됨*/
+    animation: textAni 1.3s;
+}
+
+@keyframes textAni{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+        transform: translateY(40px) skewY(8deg);
+        transform-origin: left top;/*x,y축 기준방향*/
+    }
+    /*100%{} 지점을 안만들면 원래자리로 돌아온다*/
+}
+
+
+.txt.animate__motion{} 
+.txt.animate__motion p{
+    overflow: hidden;
+} 
+.txt.animate__motion p b{
+    display: block;/*transform은 인라인요소에서 적용안됨*/
+    animation: textAni 2s;
+}
+
+/*텍스트 애니메이션 end*/
