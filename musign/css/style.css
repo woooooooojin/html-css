@@ -89,6 +89,59 @@ header{}
     padding: 50px 0 0 70px;
 }
 
+/*Journal*/
+section.journal{
+    position: relative;
+    padding: 190px 0 120px;
+
+}
+section.journal .scroll{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase; /*대문자*/
+    writing-mode: vertical-rl; /*수직으로 글자 나열*/
+    padding-top: 90px;
+
+}
+section.journal .scroll::before{
+    content: "";
+    width: 1px;
+    height: 75px;
+    background-color: #333;
+    position: absolute; /*scroll에 기준이있음*/
+    left: 6px; top: 0;
+    
+}
+
+section.journal .box .img{
+    padding-top: 100px;
+}
+section.journal .box ul{
+    border-top: 1px solid #e6e6e6;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+section.journal .box ul li{
+    overflow: hidden; /*깨짐방지*/
+    margin-bottom: 30px;
+}
+section.journal .box ul li h3{
+    float: left;
+    width: 22%; 
+    font-size: 15px;
+}
+section.journal .box ul li p{
+    float: left;
+    width: 78%;
+    color: #888;
+}
+section.journal .moreBtn{
+    margin-left: 22%;
+}
 
 
 
@@ -112,6 +165,19 @@ header{}
 
 
 
+
+
+/*inner-넓이 가이드*/
+section .inner{
+    width: 1320px;
+    margin: 0 auto;
+    overflow: hidden; /*float에 의한 부모 깨짐 방지*/
+
+}
+section .inner .box{
+    float: left;
+    width: 50%;
+}
 
 
 /*타이틀,텍스트*/
@@ -137,7 +203,7 @@ header{}
 }
 .txt p b{font-weight: normal;}
 
-.txt .moreBtn{
+.moreBtn{
     display: inline-block;
     color: #333;
     margin-top: 20px;
@@ -146,7 +212,7 @@ header{}
     transform: skewX(-15deg) translateX(5px);/*기울기*/
     transition: 0.3s;
 }
-.txt .moreBtn:hover{
+.moreBtn:hover{
     transform: skewX(0deg) translateX(0px);
     font-weight: bold;
 }
@@ -160,7 +226,7 @@ header{}
 }
 /* 타이틀,텍스트 end */
 
-/* 이미지 애니메이션 */
+/* 배경 이미지 애니메이션 */
 .img.animate__motion{
     animation: imgAni 1s;
     position: relative; /*after 기준*/
@@ -224,3 +290,22 @@ header{}
 }
 
 /*텍스트 애니메이션 end*/
+
+/*svg*/
+.circleBox{}
+.circleBox .svgAni{}
+.circleBox .svgAni path{
+   /* stroke-dasharray: 3000px; */ 
+}
+.circleBox:hover .svgAni path{
+    
+}
+
+section.journal .circleBox{
+    position: absolute; /*기준을 section.jounal 에게 relative*/
+    width: 700px;
+    right: 14.2%;
+    top: 100px;
+    z-index: -1;
+    
+}

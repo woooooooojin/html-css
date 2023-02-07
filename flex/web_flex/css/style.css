@@ -81,6 +81,7 @@ body{
     width: 100%;
     background-size: cover;
     
+    
 }
 .primary .card-list .card-item .card-desc{
     padding: 15px;
@@ -93,6 +94,7 @@ body{
 .secondard{
     width: 300px;
     padding: 15px;
+    box-sizing: border-box;
 } 
 .secondard-a, .secondard-b{
     background-color: #fff;
@@ -132,6 +134,60 @@ body{
     border-radius: 50%;
     border: 2px solid #333;
     margin-right: 7px;
+    flex-shrink: 0; /*줄어들지않게 기본값 1*/
 }
 
+/*순서만들기*/
 
+.primary{
+    order: 2;
+    width: calc(100% - 600px);
+}
+.secondard-a{
+    order: 1;
+}
+.secondard-b{
+    order: 3;
+}
+
+footer{
+    order: 4;
+    text-align: center;
+    line-height: 2.5;
+    width: 100%;
+    border-top: 1px solid lightgray;
+
+}
+
+/*반응형*/
+
+@media (max-width:1200px){
+    .secondard{width: 200px;}
+    .primary{
+        width: 50%;
+        flex-grow: 1; /*default 0*/
+    }
+}
+
+@media (max-width:1024px){
+    .primary .card-list .card-item{
+        width: 50%;
+    }
+    .primary .card-list .card-item:last-child{
+        display: none;
+    }
+}
+@media (max-width:820px){
+    .secondard{
+        width: 100%;
+    }
+
+}
+@media (max-width:600px){
+    .primary .card-list .card-item{
+        width: 100%;
+    }
+    .secondard-a{
+        order: 2; /*order의 순서가 같을경우 먼저 만들어진게 우선*/
+    }
+}
