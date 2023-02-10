@@ -1,13 +1,166 @@
 <!DOCTYPE html>
+<!--html5버전으로 문서가 만들어진다-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--호환을 어떻게 할것인지의 내용 ie의 가장 최신의 버전으로 보게함. 만약 크롬 브라우저가 있다면 크롬 브라우저가 웹페이지를 분석해서 보여준다는 의미(크롬엔진을 사용하라는 의미)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport의 사이즈를 device의 사이즈로 맞추고 기본적인 확대정도는 1(100%), 확대 또는 축소되지않는 상태로 시작-->
+
+    <meta name="author" content="부산광역시">
+    <meta name="description" content="부산광역시 대표 홈페이지">
+    <meta name="keywords" content="부산광역시 부산시청 부산시">
+
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    
+    <h2>사용자로부터 입력받기</h2>
+    <div class="첫째">
+        <form action="#">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="my-name">
+            <!--label for하고 id는 같아야한다-->
+            <br><br>
+            <label for="age">나이</label>
+            <input type="number" id="age" name="my-age">
+            <br><br>
+            <button type="submit">제출</button>
+            <button type="reset">초기화</button>
+
+
+        </form>
+    </div>
+
+    <div class="둘째">
+        <form action="#">
+            <fieldset>
+                <legend>반장</legend>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name-1">
+                <br><br>
+                <label for="age">나이</label>
+                <input type="number" id="age" name="age-1">
+            </fieldset>
+
+            <fieldset>
+                <legend>부반장</legend>
+                <label for="name2">이름</label>
+                <input type="text" id="name2" name="name-2">
+                <br><br>
+                <label for="age2">나이</label>
+                <input type="number" id="age2" name="age-2">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="셋째">
+        <form action="#">
+            <label for="txt">text</label>
+            <input type="text" id="txt" placeholder="5자 이하" maxlength="5">
+            <br><br>
+            <label for="pwd">password</label>
+            <input type="password" id="pwd" placeholder="4자 이상" minlength="4">
+            <br><br>
+
+            <label for="src">search</label>
+            <input type="search" id="src">
+            <br><br>
+            <button type="submit">제출</button>
+
+
+        </form>
+    </div>
+
+    <div class="넷째">
+        <label for="num">number</label>
+        <input type="number" id="num" min="0" max="10">
+
+        <label for="rg">range</label>
+        <input type="range" id="rg" min="0" max="100">
+
+        <label for="dt">date</label>
+        <input type="date" id="dt" min="2020-01-01" max="2030-12-31">
+
+    </div>
+
+    <div class="다섯째">
+
+        <h3>메모</h3>
+        <label for="mg">메세지를 입력하세요</label><br>
+        <textarea name="msg" id="mg" cols="50" rows="10"></textarea>
+
+    </div>
+
+    <div class="여섯째">
+        <h3>select, option태그</h3>
+        <label for="lang">언어</label>
+        <select name="lang" id="lang">
+            <option value="">-- 언어 선택 --</option>
+            <option value="html">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="React">React</option>
+        </select>
+        <br><br>
+
+        <h3>optgoup태그</h3>
+        <label for="shopping">쇼핑목록</label>
+        <select name="shopping" id="shopping">
+            <optgroup label="과일">
+                <option value="f_apl">사과</option>
+                <option value="f_grp">포도</option>
+                <option value="f_org">오렌지</option>
+            </optgroup>
+            <optgroup label="채소">
+                <option value="v_crt">당근</option>
+                <option value="v_tmt">토마토</option>
+                <option value="v_ept">가지</option>
+            </optgroup>
+            <optgroup label="육류">
+                <option value="m_bef">소고기</option>
+                <option value="m_prk">돼지고기</option>
+                <option value="m_ckn">닭고기</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div class="일곱">
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender">남자
+            <input type="radio" name="gender" checked>여자
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>지역선택</legend>
+            <input type="radio" name="area" checked>서울
+            <input type="radio" name="area">경기
+            <input type="radio" name="area">인천
+            <input type="radio" name="area">부산
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>좋아하는 과일 모두선택</legend>
+            <input type="checkbox" name="fruit" checked>사과
+            <input type="checkbox" name="fruit">배
+            <input type="checkbox" name="fruit">복숭아
+            <input type="checkbox" name="fruit">토마토
+            <input type="checkbox" name="fruit">바나나
+        </fieldset>
+
+    </div>
+
+
+
+
+
 </body>
+
 </html>

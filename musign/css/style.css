@@ -410,6 +410,107 @@ section.journal .circleBox{
         height: 80px;
         line-height: 80px;
     }
-    
+    .innerheader .mainmenu{
+        display: none;
+    }
+    .menuOpen{
+        position: absolute;
+        top: 0;
+        transform: none;
+        padding: 10px 20px;
+    }
+    .menuOpen .open::before{
+        display: none;
+    }
+    .visual .mainImg {
+        float: none;
+        width: 100%;
+    }
+    .visual .mainTxt {
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    section .inner .box{
+        float: none;
+        width: 100%;
+    }
+    section.journal{
+        padding: 80px 0;
+    }
+    section.journal .circleBox{
+        top: 200px;
+    }
+    section.journal .box .img{
+        padding-top: 0;
+        width: 80%;
+        margin: 0 auto 50px;
+
+    }
+
+
 }
 
+@media (max-width:767px){
+    body{
+        font-size: 13px; 
+    }
+    .innerheader {
+        height: 60px;
+        line-height: 60px;
+    }
+    .menuOpen .open img{
+        width: 38px;
+    }
+    .visual{
+        padding: 0 20px;
+    }
+    .tit.tit.tit{/*반복해서 적으면 힘이세진다*/
+        font-size: 30px;
+    }
+    section .inner{
+        padding: 0 20px;
+    }
+    section.journal{
+        padding: 50px 0;
+    }
+    section.journal .circleBox {
+        top: 10%;
+        right: -4%;
+    }
+    section.journal .box .img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    section.journal .box img {
+        width: 100%;
+    }
+    section.journal .box ul{
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    section.journal .box ul li {
+        margin-bottom: 20px;
+    }
+    section.journal .box ul li h3{
+        width: 100%;
+    }
+    section.journal .box ul li p{
+        width: 100%;
+        font-size: 12px;
+    }
+    section.journal .moreBtn{
+        margin-left: 0;
+    }
+}
+@media (max-width:320px){
+    .tit .en_s{
+        font-size: 16px;
+    }
+    .tit.tit.tit{
+        font-size: 27px;
+    }
+    section.journal .box ul li h3{
+        font-size: 14px;
+    }
+}
