@@ -176,6 +176,46 @@ section.journal .moreBtn{
 
 
 
+/*section service 2.13*/
+section.service{
+    padding: 190px 0;
+}
+section.service .box{}
+section.service .box .img{
+    margin-top: 60px;
+}
+section.service .box.design{
+    margin-top: -40%;
+    width: 45%;
+    border-top: 1px solid #c4e5ea;
+    padding-top: 60px;
+}
+/*padding, margin의 백분율의 기준은 상하좌우 모두 내 부모의 넓이
+height의 백분율의 기준은 부모의 높이*/
+
+section.service .box.design .tit{
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+/*section customer*/
+section.customer{
+    background: url(../img/img_04.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 160px 0;
+}
+
+section.customer .tit{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+section.customer .txt{
+    color: #777;
+}
+
 
 
 
@@ -256,7 +296,7 @@ section .inner .box{
 }
 /* 타이틀,텍스트 end */
 
-/* 배경 이미지 애니메이션 */
+/* 이미지 애니메이션 */
 .img.animate__motion{
     animation: imgAni 1s;
     position: relative; /*after 기준*/
@@ -325,7 +365,7 @@ section .inner .box{
 .circleBox{}
 .circleBox .svgAni{}
 .circleBox .svgAni path{
-   stroke-dasharray: 6200px; 
+   stroke-dasharray: 6144px; 
    stroke-dashoffset: 0px;
 }
 .circleBox.animate__motion .svgAni path{
@@ -335,7 +375,7 @@ section .inner .box{
 section.journal .circleBox{
     position: absolute; /*기준을 section.jounal 에게 relative*/
     width: 700px;
-    right: 14.2%;
+    right: 13%;
     top: 100px;
     z-index: -1;
     
@@ -350,7 +390,7 @@ section.journal .circleBox{
 
 
 
-/*반응형 media query*/
+/*-----------------------반응형------------------------- media query*/
 @media (max-width:1720px){
     .innerheader{
         max-width: 100%;
@@ -447,8 +487,35 @@ section.journal .circleBox{
         margin: 0 auto 50px;
 
     }
+    section.service {
+        padding: 80px 0;
+    }
+    section.service .txt{
+        margin-top: 20px;
+    }
+    section.service .box .img{
+        margin-top: 50px;
+        width: 70%;
+    }
+    section.service .box.design{
+        margin-top: 50px;
+        width: 100%;
+    }
+    section.service .box.design .img{
+        width: 70%;
+    }
+    section.service .box.design .tit{
+        font-size: 35px;
+    }
+    section.customer{
+        padding: 120px 0;
+    }
+    section.customer .tit{
+        font-size: 30px;
+    }
+    
 
-
+    
 }
 
 @media (max-width:767px){
@@ -502,7 +569,30 @@ section.journal .circleBox{
     section.journal .moreBtn{
         margin-left: 0;
     }
+    section.service{
+        padding: 50px 0;
+    }
+    section.service .box .img {
+        margin-top: 30px;
+        width: 100%;
+    }
+    section.service .box.design .img {
+        width: 100%;
+    }
+    section.service .box.design .tit {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    section.customer{
+        padding: 80px 20px;
+    }
+    section.customer .tit.tit{
+        font-size: 25px;
+    }
+
 }
+
+
 @media (max-width:320px){
     .tit .en_s{
         font-size: 16px;
