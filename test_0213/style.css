@@ -43,10 +43,7 @@ header .container .logo a img{
     width: 100%;
 }
 
-header .container .menu_wrap{
-    
-    
-}
+header .container .menu_wrap{}
 header .container .menu_wrap ul{
     display: flex;
     width: 800px;
@@ -61,3 +58,101 @@ header .container .menu_wrap ul li a{}
 header .container .search{}
 header .container .search a{}
 header .container .search a i{}
+
+
+/*main, slider*/
+
+.main{margin-top: 5%;}
+.main .slick-slide{/*각각의 슬라이드*/
+    display: flex;
+    position: relative;/*vespa tit의 기준*/
+}
+.left_area{
+    width: 50%;
+    height: 80vh;
+    
+}
+.right_area{
+    width: 50%;
+    height: 80vh;
+    background-color: lightblue;
+}
+
+.left_area{
+    
+}
+.left_area .vespa_img{
+    width: 120%;
+    padding-top: 160px;
+   
+}
+.main .slick-active .left_area .vespa_img{
+    animation: fadeInL 0.5s 0.5s both;
+}
+
+.left_area .vespa_img img{
+    width: 100%;
+}
+
+.main .slick-arrow{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.main .slick-arrow{}
+
+
+
+.left_area .vespa_tit{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    z-index: -1;
+    
+}
+.left_area .vespa_tit h2{
+    font-size: 135px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.left_area .vespa_tit p{
+    font-size: 19px;
+    color: #fff;
+    letter-spacing: 19px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*애니메이션*/
+@keyframes fadeInR{
+    0%{transform: translateX(150%); opacity: 0;}
+    100%{transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes fadeInL{
+    0%{transform: translateX(-150%); opacity: 0;}
+    100%{transform: translateX(0%); opacity: 1;}
+}
+
+@keyframes fadeInT{
+    0%{transform: translateY(-150%); opacity: 0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
+
+
