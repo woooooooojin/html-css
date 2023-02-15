@@ -75,7 +75,7 @@ header .container .search a i{}
 .right_area{
     width: 50%;
     height: 80vh;
-    background-color: lightblue;
+    
 }
 
 .left_area{
@@ -86,22 +86,156 @@ header .container .search a i{}
     padding-top: 160px;
    
 }
-.main .slick-active .left_area .vespa_img{
-    animation: fadeInL 0.5s 0.5s both;
-}
+
 
 .left_area .vespa_img img{
     width: 100%;
 }
 
-.main .slick-arrow{
+/*right area*/
+
+.right_area{
+    color: #fff;
+    padding-top: 20%;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+.right_area .middle_txt{}
+.right_area .middle_txt ul{
+    padding-left: 5%;
+}
+.right_area .middle_txt ul li{
+    position: relative; /*li before 기준*/
+    font-size: 20px;
+    padding-left: 12px;
+    
+    margin-bottom: 10px;
+}
+.right_area .middle_txt ul li:last-child{
+    animation-delay: 1.2s;
+}
+.right_area .middle_txt ul li::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+
+
+.right_area .bottom_area{
+    display: flex; 
+    width: 90%;
+    justify-content: space-between;
+    margin-top: 4%;
+    
+}
+
+.right_area .bottom_area .custom_btn{
+    border: 2px solid #fff;
+}
+.right_area .bottom_area .custom_btn a{
+    display: block;
+    padding: 10px 50px;
+}
+
+.right_area .bottom_area .down_btn{
+    background-color: #38a385;
+}
+.right_area .bottom_area .down_btn a{
+    display: block;
+    padding: 10px 20px;
+}
+
+.right_area .bottom_area .price span{
+    font-size: 24px;
+    line-height: 42px;
+    
+}
+
+
+
+
+
+
+/*slick-arrow*/
+/*
+.main .slick-prev{
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    visibility: hidden;
 }
-.main .slick-arrow{}
+.main .slick-prev::after{
+    content: "<";
+    font-size: 50px;
+    visibility: visible;
+    color: #fff;
+}
+
+.main .slick-next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+
+}
+.main .slick-next::before{
+    content: ">";
+    font-size: 50px;
+    visibility: visible;
+    color: #fff;
+}
+*/
+
+/*slick-arrow*/
+
+.main .slick-arrow{
+    position: absolute;
+    left: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 0;
+    visibility: hidden;
+
+}
+
+.main .slick-next{
+    right:-2%;
+    left:auto;
+}
+.main .slick-next::after{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #38a385;
+    visibility: visible;
+    font-size: 50px;
+}
+
+.main .slick-prev::after{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #38a385;
+    visibility: visible;
+    font-size: 50px;
+}
+
+
+
+
+
+
 
 
 
@@ -136,6 +270,31 @@ header .container .search a i{}
 
 
 
+
+/*애니메이션*/
+.main .slick-active .left_area .vespa_img{
+    animation: fadeInL 0.5s 0.5s both;
+}
+.main .slick-active .vespa_tit h2{
+    animation: fadeInT 0.5s 0.9s both;
+}
+.main .slick-active .vespa_tit p{
+    animation: fadeInT 0.5s 1.3s both;
+}
+.slick-active .right_area .middle_txt ul li{
+    animation: fadeInL 0.5s 1s both;
+}
+.slick-active .right_area .bottom_area .custom_btn{
+    animation: fadeInR 0.5s 1.4s both;
+}
+
+
+.slick-active .right_area .bottom_area .down_btn{
+    animation: fadeInR 0.5s 1.6s both;
+}
+.slick-active .right_area .bottom_area .price{
+    animation: fadeInR 0.5s 1.9s both;
+}
 
 
 /*애니메이션*/

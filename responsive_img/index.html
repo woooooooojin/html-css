@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="https://via.placeholder.com/150" alt="img">
+    </div>
+
+    <div>
+        <img src="https://via.placeholder.com/100"
+        srcset="https://via.placeholder.com/200 3x, https://via.placeholder.com/300 5x" 
+        alt="img">
+    <!-- </div> 해상도에 따른 이미지선택 -->
+
+    <div>
+        <img src="https://via.placeholder.com/100" 
+        srcset="https://via.placeholder.com/400 1440w, https://via.placeholder.com/300 720w, https://via.placeholder.com/200 360w"  
+        alt="img">
+    </div>
+
+
+    <div>
+        <picture>
+            <source media="(min-width:990px )" srcset="https://via.placeholder.com/500">
+            <source media="(min-width:720px )" srcset="https://via.placeholder.com/400">
+            <img src="https://via.placeholder.com/300" alt="img">
+        </picture>
+    </div>
+</body>
+</html>
