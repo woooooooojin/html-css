@@ -226,3 +226,30 @@ a{
 
 
 /***********************************************/
+#popup_chk2{
+    display: none;
+}
+#popup_chk2:checked ~ .popup2{display: block;}
+#popup_chk2 ~ .popup2{display: none;}
+
+.popup2{
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    padding: 5px;
+    position: absolute;
+    top: 200px; left: 200px;
+
+}
+.popup2 p{
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.popup2 .popup_close2{
+    text-align: right;
+    margin-left: 280px;
+    margin-top: 20px;
+   
+}
