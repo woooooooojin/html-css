@@ -1,0 +1,228 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{
+    color: black; 
+    text-decoration: none;
+}
+
+.lnb_01, .lnb_02, .lnb_03, .lnb_04, .lnb_05{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+.lnb_01 li{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.lnb_01 li:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+/******lnb02*******/
+.lnb_02{}
+.lnb_02 li{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+.lnb_02 li a{
+    display: block; /*a는 인라인요소,, display block = width 100%*/
+    text-align: center;
+    line-height: 50px;
+    background-color: cadetblue;
+    color: #fff;
+    transition: all 0.5s;
+}
+.lnb_02 li a:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+
+
+/***************lnb03*****************/
+.lnb_03 li{
+    width: 200px;
+    height: 50px;
+    float: left;
+    
+}
+.lnb_03 li a{
+    display: block;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    
+}
+.lnb_03 li li{
+    display: none;
+    
+}
+.lnb_03 li:hover li{
+    /* display: block; */
+
+}
+.lnb_03:hover li li{
+    display: block; /*transition 사용못함 사용하려면 opacity 사용해야함*/
+}
+
+.lnb_03>li>a:hover{
+    background-color: #ccc;
+}
+
+
+.lnb_03 li li a:hover{
+    background-color: bisque;
+    color: black;
+}
+
+/*pull down*/
+
+.lnb_03 ul{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+.lnb_03:hover ul{
+    height: 250px;
+}
+
+
+
+/********lnb_04********/
+.lnb_04 li{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+.lnb_04 li a{
+    display: block;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.lnb_04 li li{
+    display: none;
+}
+.lnb_04 li:hover li{
+    display: block;
+}
+
+.lnb_04>li>a:hover{
+    background-color: #ccc;
+}
+.lnb_04 li li a:hover{
+    background-color: bisque;
+    color: black;
+}
+/*pull down*/
+.lnb_04 ul{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.lnb_04:hover ul{
+    height: 250px;
+}
+
+
+/*********lnb05***************/
+.lnb_05 li{
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+.lnb_05 li a{
+    display: block;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.lnb_05 li a:hover{
+    background-color: #ccc;
+}
+
+.lnb_05 li li{
+    display: none;
+}
+.lnb_05 li:hover li{
+    display: block;
+} 
+.lnb_05 li li a:hover{
+    background-color: bisque;
+    color: black;
+}
+
+
+.lnb_05 ul {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: width 0.2s;
+}
+.lnb_05:hover ul{  
+    width: 1000px;
+    height: 50px;
+    
+
+}
+
+/* .lnb_05 li ul{
+    width: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: width 0.3s;
+
+}
+.lnb_05 li:hover ul{
+    width: 1000px;
+    height: 50px;
+    
+}
+.lnb_05 li:hover ul li{
+    float: left;
+} */
+
+
+/****************popup****************/
+/* '~'은 id에 해당하는 태그의 형제(같은레벨)들 중에서 아래에 있는(동생) 태그*/
+#popup_chk{
+    display: none;
+}
+#popup_chk:checked ~ .popup {display: block;}
+#popup_chk ~ .popup {display: none;}
+
+.popup{
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    padding: 5px;
+    position: absolute;
+    top: 100px; left: 100px; /*팝업은 떠 있어야함*/
+}
+.popup p{
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+}
+.popup .popup_close{
+    text-align: right;
+    margin-left: 280px;
+    margin-top: 20px;
+    /* display: block; */
+}
+
+
+/***********************************************/
