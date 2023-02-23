@@ -1,0 +1,128 @@
+*{margin: 0; padding: 0;}
+
+
+
+
+/**********************headbanner***********************/
+#banner_chk{display: none;}
+#banner_chk:checked ~ .banner{display: block;}
+#banner_chk ~ .banner{display: none;}
+
+.banner{
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+    
+
+}
+.banner .banner_inner{
+    width: 100%;
+    height: 100%;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+.banner .banner_inner label{
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+
+.banner_inner div{
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+}
+
+/**********************wingbanner***********************/
+#wing_chk{display: none;}
+#wing_chk:checked ~ .wbanner{right: -300px;}
+#wing_chk ~ .wbanner_ex .wbanner{display: none;}
+
+#wing_chk:checked ~ .wbanner .wing_open{display: block;}
+#wing_chk:checked ~ .wbanner .wing_close{display: none;}
+
+#wing_chk ~ .wbanner .wing_open{display: none;}
+#wing_chk ~ .wbanner .wing_close{display: block;}
+
+
+.wbanner{
+    width: 300px;
+    height: 100vh;
+    border: 1px solid black;
+    box-sizing: border-box;
+    position: absolute; /*fixed*/
+    right: 0;
+    transition: right 0.3s;
+    
+}
+
+.wbanner_inner{
+    width: 300px;
+    height: 100vh;
+    background-color: cadetblue;
+    position: relative;
+    
+    
+}
+
+.wbanner_inner label{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    position: absolute;
+    left: -30px;
+    background-color:cornflowerblue;
+    text-align: center;
+    line-height: 30px;
+}
+.wbanner_inner div{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*******************wingbanner left**************************/
+
+#wingL_chk{display: none;}
+#wingL_chk:checked ~ .wbannerL{width: 300px;}
+#wingL_chk ~ .wbannerL{display: none;}
+
+#wingL_chk:checked ~ .wbannerL .L_open{display: block;} 
+#wingL_chk:checked ~ .wbannerL .L_close{display: none;} 
+
+#wingL_chk ~ .wbannerL .L_open{display: none;}
+#wingL_chk ~ .wbannerL .L_close{display: block;}
+
+
+.wbannerL{
+    width: 0;
+    height: 100vh;
+    transition: 0.3s;
+    
+
+
+    
+    
+}
+
+.Lbanner_inner{
+    width: 300px;
+    height: 100vh;
+    background-color: lightgray;
+    position: relative;
+   
+
+}
+.Lbanner_inner label{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: blanchedalmond;
+}
+
