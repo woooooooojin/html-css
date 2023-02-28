@@ -1,0 +1,55 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+
+#gnb_chk{display: none;}
+#gnb_chk:checked ~ .gnb{display: block;} 
+#gnb_chk ~ .gnb{display: none;}
+
+
+
+
+
+.header{
+    width: 100%;
+    height: 45px;
+    background-image: url(./images/header_bg.png);
+    position: relative;
+}
+.header .home{
+    width: 62px;
+    height: 32px;
+    background-image: url(./images/left_btn.png);
+    position: absolute;
+    top: 7px; left: 7px;
+    text-indent: -9999px; /*글자가 프레임안으로 들어올수없게 들여쓰기를 -로 준다*/
+}
+
+.header h1{
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+.header .gnb_btn{
+    width: 32px;
+    height: 32px;
+    background-image: url(./images/right_btn.png);
+    position: absolute;
+    top: 7px; right: 7px;
+    text-indent: -9999px;
+}
+/*gnb display block none*/
+/*gnb display 밖으로 나갓다가 들어오는거*/
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    color: #fff;
+    position: fixed; /*width를 생략하면 안된다*/
+    bottom: 0;left: 0;
+
+}
