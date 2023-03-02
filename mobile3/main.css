@@ -1,0 +1,25 @@
+*{margin: 0; padding: 0;}
+
+.box{
+    width: 100%;
+    height: 100px;
+}
+.box01{
+    background-color: blanchedalmond;
+}
+.box02{
+    background-color: cadetblue;
+}
+
+/*screen print all only */
+@media only screen and (min-width:321px) and (orientation:landscape){
+    /*최소 너비 321px (321 이상),   오리엔테이션 : 가로로 틸트했을때 landscape:풍경화처럼 보이게 */
+    .boxA{
+        overflow: hidden;
+    }
+
+    .boxA .box{
+        width: 50%;
+        float: left;
+    }
+}

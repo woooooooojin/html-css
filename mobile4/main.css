@@ -1,0 +1,102 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+.header h1{
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+.lnb{
+    overflow: hidden;
+}
+.lnb li{
+    float: left;
+    width: 20%;
+    height: 30px;
+    background-color: #ccc;
+    line-height: 30px;
+    text-align: center;
+}
+.visual_main {
+    height: 300px;
+    width: 100%;
+    line-height: 300px;
+    text-align: center;
+
+}
+
+.event{}
+.event div{
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    line-height: 100px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+.event .event01{}
+.event .event02{}
+
+
+.event .envent02{}
+
+
+
+.notice_box{
+   
+}
+
+.notice_box .notice{
+
+}
+
+/*1번버전*/
+/* .notice{overflow: hidden;}
+.notice div{
+    width: 50%;
+    height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+
+} */
+
+
+ /*2번 버전*/
+/* .notice{
+    overflow: hidden;
+}
+.notice div{
+    width: 50%;
+    height: 200px;
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+} */
+
+
+
+@media all and (min-width:321px) and (orientation:landscape) {
+    .event{overflow: hidden;}
+    .event div{
+        width: 50%;
+        float: left;
+    }
+    /* .notice_box{
+        overflow: hidden;
+    }
+    .notice_box .notice{
+        width: 50%;
+        float: left;
+    } */
+
+
+     .notice div{
+        width: 25%;
+    } 
+
+    
+}
+.notice_box .noticeA{}
+.notice_box .noticeB{}
