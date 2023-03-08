@@ -5,3 +5,10 @@
     font-weight: 900;
     /*fontawesome v5 에서 개발자모드 그림 클릭후 그림번호 폰트 패밀리 웨이트 복사붙여넣기*/
 }
+
+.section{
+  background-color: #599d2c;  
+}
+.section2{
+    background-color: #67ae3e;  
+  }
